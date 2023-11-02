@@ -1,13 +1,13 @@
 pipeline:
-  name: default
-  identifier: default
-  projectIdentifier: default
+  name: dotnetpipeline
+  identifier: dotnetpipeline
+  projectIdentifier: project1
   orgIdentifier: default
   properties:
     ci:
       codebase:
-        connectorRef: YOUR_CODE_REPO_CONNECTOR_ID
-        repoName: YOUR_REPO_NAME
+        connectorRef: org.githubconnector1
+        repoName: hello-dotnet-core
         build: <+input>
   tags: {}
   stages:
@@ -21,8 +21,8 @@ pipeline:
           infrastructure:
             type: KubernetesDirect
             spec:
-              connectorRef: YOUR_KUBERNETES_CLUSTER_CONNECTOR_ID
-              namespace: YOUR_NAMESPACE
+              connectorRef: k8sconnector
+              namespace: default
               automountServiceAccountToken: true
               nodeSelector: {}
               os: Linux
@@ -33,9 +33,9 @@ pipeline:
                   name: Restore Cache From S3
                   identifier: Restore_Cache_From_S3
                   spec:
-                    connectorRef: YOUR_AWS_CONNECTOR_ID
-                    region: us-east-1
-                    bucket: YOUR_S3_BUCKET
+                    connectorRef: awsconnector2
+                    region: ap-south-1
+                    bucket: harness-dotnet
                     key: cache-{{ checksum "packages.lock.json" }}
                     archiveFormat: Tar
               - step:
@@ -91,9 +91,9 @@ pipeline:
                   name: Save Cache to S3
                   identifier: Save_Cache_to_S3
                   spec:
-                    connectorRef: YOUR_AWS_CONNECTOR_ID
-                    region: us-east-1
-                    bucket: YOUR_S3_BUCKET
+                    connectorRef: awsconnector2
+                    region: ap-south-1
+                    bucket: harness-dotnet
                     key: cache-{{ checksum "packages.lock.json" }}
                     sourcePaths:
                       - ~/.local/share/NuGet/cache
