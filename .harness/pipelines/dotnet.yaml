@@ -6,7 +6,7 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: org.githubconnector1
+        connectorRef: org.githubcoonector-02-11
         repoName: harness-dotnet7
         build: <+input>
   tags: {}
