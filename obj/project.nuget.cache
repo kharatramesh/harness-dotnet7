@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "/QhaCihO1b9LYGFrLqLCKZ3hVFVUO6/iR57Jlw54D0GFL5oTjNZ3O8Uy0toEhuSwTuiYjvLATyqB31eLndnCkw==",
+  "success": true,
+  "projectFilePath": "D:\\hello-dotnet-core\\helloworld-dotnetcore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Priar Technoworld\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Priar Technoworld\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Priar Technoworld\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Priar Technoworld\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

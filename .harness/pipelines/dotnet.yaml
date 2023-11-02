@@ -1,13 +1,13 @@
 pipeline:
   name: dotnetpipeline
   identifier: dotnetpipeline
-  projectIdentifier: project1
+  projectIdentifier: project3
   orgIdentifier: default
   properties:
     ci:
       codebase:
         connectorRef: org.githubconnector1
-        repoName: hello-dotnet-core
+        repoName: harness-dotnet7
         build: <+input>
   tags: {}
   stages:
